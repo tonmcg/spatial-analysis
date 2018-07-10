@@ -1,24 +1,24 @@
 # Spatial Analysis w R in Power BI: Mapping U.S. Census Data
 
-## Prologue: The Speaker
-Who am I?
-Who do I work for?
-What expertise do I have with this subject?
+## Prologue
+-Who am I?
+-Who do I work for?
+-What expertise do I have with this subject?
 
-
-What is Spatial Analysis?
+### What is Spatial Analysis?
 What's the difference between mapping data and performing geospatial analysis?
 Geocomputing with R comes in handy here
 What other R spatial analysis resouces can I use?
 
-What Will You Expect to Learn?
+### What Will You Expect to Learn?
 Introduction to most popular R packages for geospatial that work in Power BI
 Overview of introductory geospatial analysis 
 
-What I won't go through in this presentation
+### What I won't go through in this presentation
 Shape files
 Review all the R packages used for spatial analysis
 Advanced Machine Learning with spatial data
+
 
 ## Part I: The Tools
 
