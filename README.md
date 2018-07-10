@@ -1,7 +1,6 @@
-# spatial-analysis
-## Spatial Analysis w R in Power BI: Mapping U.S. Census Data
+# Spatial Analysis w R in Power BI: Mapping U.S. Census Data
 
-### Prologue: The Speaker
+## Prologue: The Speaker
 Who am I?
 Who do I work for?
 What expertise do I have with this subject?
@@ -21,7 +20,7 @@ Shape files
 Review all the R packages used for spatial analysis
 Advanced Machine Learning with spatial data
 
-### Part I: The Tools
+## Part I: The Tools
 
 Why is R so Popular?
 
@@ -48,7 +47,7 @@ Popular R Geospatial Packages that work with Power BI
 	• Desktop
 	• Power BI Service
 
-### Part II: The Data
+## Part II: The Data
 
 What is spatial data? How do I know I have spatial data?
 Why limit ourselves to United States data?
@@ -62,17 +61,17 @@ Why Focus on U.S. Census API?
 	• How do I connect to it? => PowerCensus
 	• What do I do once I have the data?
 
-### Part III: The Analysis
+## Part III: The Analysis
 Types of Spatial Analysis => Geocomputing with R
 
 Gentle introduction to clustering and other 
 
-### Part IV: A Demonstration
+## Part IV: A Demonstration
 
-### Part V: Limitations
+## Part V: Limitations
 Look at David Eversveld Top 10 and Top 5 Maps with Power BI
 
-### Epilogue: Resources
+## Epilogue: Resources
 tonymcgovern.com/powerquery
 
-### Questions
+## Questions
