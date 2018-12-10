@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Spatial Data Analysis in Power BI</title>
+
+		<meta name="description" content="Create beautiful thematic maps and perform impactful spatial data analytics">
+		<meta name="author" content="Tony McGovern - emdata.ai">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>
+						Spatial Data Analysis in Power BI
+					</h2>
+					<h4>
+						From Beautiful Thematic Maps to R-based Models
+					</h4>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 473px; left: 444px; top: 95px; height: auto;">
+						<div style="text-align: left; z-index: 11;">
+							<ul>
+								<li>
+									<p>
+										<span>Understand How Power BI Can Help Your Workflow</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>See the Breadth of Spatial Analytics Available in Power BI</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 41px; top: 106px;">
+						<div style="z-index: 12;">
+							<h2>Session Agenda</h2>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 413px; left: 514px; top: 95px; height: auto;">
+						<div style="text-align: left; z-index: 12;">
+							<h2>
+								<span>Tony McGovern</span>
+							</h2>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 413px; left: 514px; top: 202px; height: auto;">
+						<div style="z-index: 14; text-align: left; font-size: 80%;">
+							<p>
+								<span>Hacker. Artist. Storyteller. Data lover.</span>
+							</p>
+							<ul>
+								<li>Data Scientist</li>
+								<li>emdata.ai</li>
+								<li>github.com/tonmcg</li>
+								<li>twitter.com/tonmcg</li>
+							</ul>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 420px; height: 420px; left: 32px; top: 71px; min-width: 4px; min-height: 4px;">
+							<div style="z-index: 10;">
+								<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587506/Tony.jpg" width="100%" height="100%">
+							</div>
+						</div>
+				</section>
+				<section>
+					<h2>How Power BI Can Help Your Workflow</h2>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 10;">
+							<img width="600" src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587509/r-spatial_workflow.png"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 100px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">Simple Spatial Data Workflow in R</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 182px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 11;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587509/r-spatial_workflow.png"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 512px; height: 381px; left: 179px; top: 182px;">
+						<div class="fragment current-visible visible current-fragment" style="z-index: 12; transform: rotate(329deg); opacity: 0.55;">
+							<div style="z-index: 12; transition-duration: 2s; transition-delay: 0.6s;">
+								<svg
+									xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 512 381">
+									<defs>
+										<clipPath id="shape-mask-2-1544408115832">
+											<ellipse rx="256" ry="190.5" cx="256" cy="190.5"></ellipse>
+										</clipPath>
+									</defs>
+									<ellipse rx="256" ry="190.5" cx="256" cy="190.5" clip-path="url(#shape-mask-2-1544408115832)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#7f6000" stroke-width="10"></ellipse>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 181px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 200px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">How Power BI Can Help Your Workflow</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<section>
+						<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+							<div style="z-index: 10;">
+								<img width="600" src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587526/Query_Editor.png"/>
+							</div>
+						</div>
+						<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+							<div style="z-index: 12;" >
+								<svg
+									xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+									<defs>
+										<clipPath id="shape-mask-7-1544408822990">
+											<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+										</clipPath>
+									</defs>
+									<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+								</svg>
+							</div>
+						</div>
+						<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 100px;">
+							<div style="z-index: 13; transform: rotate(360deg);">
+								<div style="z-index: 13;">
+									<p>
+										<span style="color:#FFFFFF">Data Preparation in Power BI</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section>
+								<h3>
+									How Can Power BI Help Prepare Your Data?
+								</h3>
+								<ul>
+									<li>Data Connectivity &amp; Ingestion: Access data stored in hundreds of data sources through a clickable interface</li>
+									<li>Data Transformation: Apply over 350 different data transformations, preview data, and see history of applied steps, all through the user interface</li>
+									<li>Data Query Extensions: Comes with its own highly-intuitive data mashup language that can be customized to help with any data preparation activity</li>
+								</ul>
+					</section>
+				</section>
+				<section>
+							<h2>Breadth of Spatial Analytics Available in Power BI</h2>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 10;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587536/Seattle_Real_Time_911_Calls_Fast.gif"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 130px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">Heatmaps, Clustering, Circles</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 10;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587539/California_12_District.gif"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 145px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">Custom Boundaries</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 10;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587547/Esri_Washington_Election.gif"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 100px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">2016 Presidential Election Results</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 662px; height: 358px; left: 269px; top: 71px; min-width: 4px; min-height: 4px;">
+						<div style="z-index: 10;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/976858/images/5587573/Twitter_Sentiment_Analysis.gif"/>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 300px; height: 300px; left: -150px; top: 71px;">
+						<div style="z-index: 12;" >
+							<svg
+								xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 300 300">
+								<defs>
+									<clipPath id="shape-mask-7-1544408822990">
+										<ellipse rx="150" ry="150" cx="150" cy="150"></ellipse>
+									</clipPath>
+								</defs>
+								<ellipse rx="150" ry="150" cx="150" cy="150" clip-path="url(#shape-mask-7-1544408822990)" class="shape-element" fill="#000000" stroke="#eeeeee" stroke-width="2"></ellipse>
+							</svg>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; height: auto; width: 231px; left: -114px; top: 100px;">
+						<div style="z-index: 13; transform: rotate(360deg);">
+							<div style="z-index: 13;">
+								<p>
+									<span style="color:#FFFFFF">ML Models in R, Azure, and Power BI</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div style="display: block; position: absolute; width: 384px; left: 48px; top: 258px; height: auto;">
+						<div style="text-align: left; z-index: 10; font-size: 60%;">
+							<h2>Resources</h2>
+						</div>
+					</div>
+					<div style="display: block; position: absolute; width: 480px; left: 432px; top: 25px; height: auto;">
+						<div style="text-align: left; z-index: 13; font-size: 40%;">
+							<ul>
+								<li>
+									<p>
+										<span>Getting Started with Power Query for Data Preparation
+							
+											<br/>
+											<a href="https://powerbi.microsoft.com/en-us/blog/getting-started-with-power-query-part-i/" target="_blank">https://powerbi.microsoft.com/en-us/blog/getting-started-with-power-query-part-i/</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Using R in Power BI
+							
+											<br/>
+											<a href="https://www.red-gate.com/simple-talk/sql/bi/power-bi-introduction-working-with-r-scripts-in-power-bi-desktop-part-3/" target="_blank">https://www.red-gate.com/simple-talk/sql/bi/power-bi-introduction-working-with-r-scripts-in-power-bi-desktop-part-3/</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Mapbox Visual in Power BI
+							
+											<br/>
+											<a href="https://www.mapbox.com/help/power-bi-choropleth-map/" target="_blank">https://www.mapbox.com/help/power-bi-choropleth-map/</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>2016 Presidential Election Results
+							
+											<br/>
+											<a href="https://github.com/tonmcg/US_County_Level_Election_Results_08-16" target="_blank">https://github.com/tonmcg/US_County_Level_Election_Results_08-16</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Socrata Open Data API
+							
+											<br/>
+											<a href="https://dev.socrata.com/" target="_blank">https://dev.socrata.com/</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Rsocrata
+							
+											<br/>
+											<a href="https://github.com/Chicago/RSocrata" target="_blank">https://github.com/Chicago/RSocrata</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>ACLU’s What the District?!
+							
+											<br/>
+											<a href="https://what-the-district.aclu.org/" target="_blank">https://what-the-district.aclu.org/</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Build Experiment in Azure Machine Learning Studio
+							
+											<br/>
+											<a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio/create-experiment" target="_blank">https://docs.microsoft.com/en-us/azure/machine-learning/studio/create-experiment</a>
+										</span>
+									</p>
+								</li>
+								<li>
+									<p>
+										<span>Using R in Azure Machine Learning Studio
+							
+											<br/>
+											<a href="https://docs.microsoft.com/en-us/azure/machine-learning/studio/r-quickstart" target="_blank">https://docs.microsoft.com/en-us/azure/machine-learning/studio/r-quickstart</a>
+										</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script type="text/javascript">
+Reveal.initialize({
+
+// Display presentation control arrows
+controls: true,
+
+// Help the user learn the controls by providing hints, for example by
+// bouncing the down arrow when they first encounter a vertical slide
+controlsTutorial: true,
+
+// Determines where controls appear, "edges" or "bottom-right"
+controlsLayout: 'bottom-right',
+
+// Visibility rule for backwards navigation arrows; "faded", "hidden"
+// or "visible"
+controlsBackArrows: 'faded',
+
+// Display a presentation progress bar
+progress: true,
+
+// Display the page number of the current slide
+slideNumber: false,
+
+// Push each slide change to the browser history
+history: false,
+
+// Enable keyboard shortcuts for navigation
+keyboard: true,
+
+// Enable the slide overview mode
+overview: true,
+
+// Vertical centering of slides
+center: true,
+
+// Enables touch navigation on devices with touch input
+touch: true,
+
+// Loop the presentation
+loop: false,
+
+// Change the presentation direction to be RTL
+rtl: false,
+
+// Randomizes the order of slides each time the presentation loads
+shuffle: false,
+
+// Turns fragments on and off globally
+fragments: true,
+
+// Flags whether to include the current fragment in the URL,
+// so that reloading brings you to the same fragment position
+fragmentInURL: false,
+
+// Flags if the presentation is running in an embedded mode,
+// i.e. contained within a limited portion of the screen
+embedded: false,
+
+// Flags if we should show a help overlay when the questionmark
+// key is pressed
+help: true,
+
+// Flags if speaker notes should be visible to all viewers
+showNotes: false,
+
+// Global override for autoplaying embedded media (video/audio/iframe)
+// - null: Media will only autoplay if data-autoplay is present
+// - true: All media will autoplay, regardless of individual setting
+// - false: No media will autoplay, regardless of individual setting
+autoPlayMedia: null,
+
+// Number of milliseconds between automatically proceeding to the
+// next slide, disabled when set to 0, this value can be overwritten
+// by using a data-autoslide attribute on your slides
+autoSlide: 0,
+
+// Stop auto-sliding after user input
+autoSlideStoppable: true,
+
+// Use this method for navigation when auto-sliding
+autoSlideMethod: Reveal.navigateNext,
+
+// Specify the average time in seconds that you think you will spend
+// presenting each slide. This is used to show a pacing timer in the
+// speaker view
+defaultTiming: 120,
+
+// Enable slide navigation via mouse wheel
+mouseWheel: false,
+
+// Hides the address bar on mobile devices
+hideAddressBar: true,
+
+// Opens links in an iframe preview overlay
+// Add `data-preview-link` and `data-preview-link="false"` to customise each link
+// individually
+previewLinks: false,
+
+// Transition style
+transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+// Transition speed
+transitionSpeed: 'default', // default/fast/slow
+
+// Transition style for full page slide backgrounds
+backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
+
+// Number of slides away from the current that are visible
+viewDistance: 3,
+
+// Parallax background image
+parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+// Parallax background size
+parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+// Number of pixels to move the parallax background per slide
+// - Calculated automatically unless specified
+// - Set to 0 to disable movement along an axis
+parallaxBackgroundHorizontal: null,
+parallaxBackgroundVertical: null,
+
+// The display mode that will be used to show slides
+display: 'block'
+
+});			
+		</script>
+	</body>
+</html>
